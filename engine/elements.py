@@ -1484,3 +1484,1205 @@ class BlinkRayHorizontal():
 		self.blinking = False
 
 
+class Bear():
+	"""
+	Bear Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x22
+		self.name = "Bear"
+		self.character = 0x99
+		self.color = 0x06
+		self.destructable = True
+		self.pushable = True
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 3
+		self.act_code = 0x054F
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'B'
+		self.internal_name = "Bear"
+		self.category = "Creatures"
+		self.P1 = "Sensitivity"
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 1
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = DARK_YELLOW
+		self.blinking = False
+
+
+class Ruffian():
+	"""
+	Ruffian Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x23
+		self.name = "Ruffian"
+		self.character = 0x05
+		self.color = 0x0D
+		self.destructable = True
+		self.pushable = True
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 1
+		self.act_code = 0x0351
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'R'
+		self.internal_name = "Ruffian"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = "Intelligence"
+		self.P3 = "Resting Time"
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 2
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = LIGHT_PURPLE
+		self.blinking = False
+
+
+class ZZTObject():
+	"""
+	Bear Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x24
+		self.name = "Object"
+		self.character = 0x02
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = True
+		self.draw_code = 0x2B85
+		self.cycle = 3
+		self.act_code = 0x2AA5
+		self.interact_code = 0x2BB7
+		self.menu_number = 2
+		self.key = 'O'
+		self.internal_name = "Object"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = "Character"
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = "Edit Program"
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = DARK_YELLOW
+		self.blinking = False		
+
+
+class Slime():
+	"""
+	Slime Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x25
+		self.name = "Slime"
+		self.character = 0x2A
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 3
+		self.act_code = 0x20AE
+		self.interact_code = 0x2295
+		self.menu_number = 2
+		self.key = 'V'
+		self.internal_name = "Slime"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = None
+		self.P3 = "Movement Speed"
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class Shark():
+	"""
+	Shark Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x26
+		self.name = "Shark"
+		self.character = 0x5E
+		self.color = 0x07
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 3
+		self.act_code = 0x2321
+		self.interact_code = 0x0010
+		self.menu_number = 2
+		self.key = 'Y'
+		self.internal_name = "Shark"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = "Intelligence"
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = LIGHT_GREY
+		self.blinking = False		
+
+
+class SpinningGun():
+	"""
+	Spinning Gun Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x27
+		self.name = "Spinning Gun"
+		self.character = 0x18
+		self.color = 0xFF
+		self.destructable = True
+		self.pushable = True
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = True
+		self.draw_code = 0x11D0
+		self.cycle = 2
+		self.act_code = 0x12A7
+		self.interact_code = 0x0010
+		self.menu_number = 2
+		self.key = 'G'
+		self.internal_name = "Spinning Gun"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = "Intelligence"
+		self.P3 = "Firing Rate"
+		self.edit_board = "Firing Type"
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fd_color
+		self.blinking = False	
+
+
+class Pusher():
+	"""
+	Pusher Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x28
+		self.name = "Pusher"
+		self.character = 0x10
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = Falsee
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = Truee
+		self.draw_code = 0x3517
+		self.cycle = 4
+		self.act_code = 0x358A
+		self.interact_code = 0x0010
+		self.menu_number = 2
+		self.key = 'P'
+		self.internal_name = "Pusher"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = "Push Direction"
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class Lion():
+	"""
+	Lion Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x29
+		self.name = "Lion"
+		self.character = 0xEA
+		self.color = 0x0C
+		self.destructable = True
+		self.pushable = True
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 2
+		self.act_code = 0x0113
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'L'
+		self.internal_name = "Lion"
+		self.category = "Beasts"
+		self.P1 = "Intelligence"
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 1
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = LIGHT_RED
+		self.blinking = False
+
+
+class Tiger():
+	"""
+	Bear Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2A
+		self.name = "Tiger"
+		self.character = 0xE3
+		self.color = 0x0B
+		self.destructable = True
+		self.pushable = True
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 2
+		self.act_code = 0x022D
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'T'
+		self.internal_name = "Tiger"
+		self.category = "Beasts"
+		self.P1 = "Intelligence"
+		self.P2 = "Firing Rate"
+		self.P3 = "Firing Type"
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 2
+
+		# Color and blinking information
+		self.bg_color = BLACK
+		self.fg_color = LIGHT_CYAN
+		self.blinking = False
+
+
+class BlinkRayVertical():
+	"""
+	Vertical Blink Ray Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2B
+		self.name = "Blink Ray (Vertical)"
+		self.character = 0xBA
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class Head():
+	"""
+	Centipede Head Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2C
+		self.name = "Head"
+		self.character = 0xE9
+		self.color = 0xFF
+		self.destructable = True
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 2
+		self.act_code = 0x06BF
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'H'
+		self.internal_name = "Head"
+		self.category = "Centipedes"
+		self.P1 = "Intelligence"
+		self.P2 = "Deviance"
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 1
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False	
+
+
+class Segment():
+	"""
+	Centipede Segment Element
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2D
+		self.name = "Segment"
+		self.character = 0x4F
+		self.color = 0xFF
+		self.destructable = True
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = 2
+		self.act_code = 0x0EED
+		self.interact_code = 0x00F5
+		self.menu_number = 2
+		self.key = 'S'
+		self.internal_name = "Segment"
+		self.category = "Creatures"
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 3
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False	
+
+
+class DummyElement():
+	"""
+	A Dummy ZZT Element, which I don't think is actually used, but is in the list
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2E
+		self.name = ""
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class BlueText():
+	"""
+	Blue ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x2F
+		self.name = "Text (Blue)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class GreenText():
+	"""
+	Green ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x30
+		self.name = "Text (Green)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class CyanText():
+	"""
+	Cyan ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x31
+		self.name = "Text (Cyan)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False	
+
+
+class RedText():
+	"""
+	Red ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x32
+		self.name = "Text (Red)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class PurpleText():
+	"""
+	Purple ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x33
+		self.name = "Text (Purple)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class BrownText():
+	"""
+	Brown ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x34
+		self.name = "Text (Brown)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class BlackText():
+	"""
+	Black ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x35
+		self.name = "Text (Black)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class WhiteBlinkText():
+	"""
+	Blinking White ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x36
+		self.name = "Blinking Text (White)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class BlueBlinkText():
+	"""
+	Blue Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x37
+		self.name = "Blinking Text (Blue)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class GreenBlinkText():
+	"""
+	Green Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x38
+		self.name = "Blinking Text (Green)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class CyanBlinkText():
+	"""
+	Cyan Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x39
+		self.name = "Blinking Text (Cyan)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False	
+
+
+class RedBlinkText():
+	"""
+	Red Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x3A
+		self.name = "Blinking Text (Red)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class PurpleBlinkText():
+	"""
+	Purple Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x3B
+		self.name = "Blinking Text (Purple)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class BrownBlinkText():
+	"""
+	Brown Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x3C
+		self.name = "Blinking Text (Brown)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
+
+
+class GreyBlinkingText():
+	"""
+	Black Blinking ZZT Text
+	"""
+
+	def __init__(self, fg_color = WHITE, bg_color = BLACK):
+		"""
+		"""
+
+		# These element properties are from www.shikadi.net/moddingwiki/ZZT_Format and
+		# the ZZT format document
+		self.id = 0x3D
+		self.name = "Blinking Text (Black)"
+		self.character = 0x20
+		self.color = 0xFF
+		self.destructable = False
+		self.pushable = False
+		self.editor_floor = False
+		self.floor = False
+		self.shown = False
+		self.special_draw = False
+		self.draw_code = 0x0020
+		self.cycle = -1
+		self.act_code = 0x0000
+		self.interact_code = 0x0010
+		self.menu_number = 0
+		self.key = None
+		self.internal_name = None
+		self.category = None
+		self.P1 = None
+		self.P2 = None
+		self.P3 = None
+		self.edit_board = None
+		self.edit_step = None
+		self.edit_code = None
+		self.points = 0
+
+		# Color and blinking information
+		self.bg_color = bg_color
+		self.fg_color = fg_color
+		self.blinking = False
