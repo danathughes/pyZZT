@@ -32,6 +32,17 @@ def readWord(data, index):
 	return 256*ord(data[index+1]) + ord(data[index])
 
 
+def readLong(data, index):
+	"""
+	Read four bytes from the data and return an integer.
+	"""
+
+	# Note that the data is little-endian (Intel style), so the first byte
+	# is the least significant
+
+	return 16777216*ord(data[index+3]) + 65536*ord(data[index+2]) + 256*ord(data[index+1]) + ord(data[index])
+
+
 def extractBoard(data):
 	"""
 	Extract a board from the data
@@ -60,10 +71,15 @@ def extractBoard(data):
 		if num_tiles == 0:
 			num_tiles = 256
 
+		# Determine the foreground and background colors
+		bg_color = int(color / 16) % 8
+		fg_color = color % 16
+
+
 		# Create the appropriate number of tiles
 		for i in range(cur_tile_idx, cur_tile_idx+num_tiles):
 			#board.tiles[i] = Tile(element, color)
-			board.tiles[i] = zztElementList[element]()
+			board.tiles[i] = zztElementList[element](fg_color, bg_color)
 
 		cur_tile_idx += num_tiles
 		cur_rle_idx += 3
@@ -88,20 +104,53 @@ def extractBoard(data):
 	board.player_enter_y = readByte(data, 0x43)
 	board.time_limit = readWord(data, 0x44)
 
-	num_status_elements = readWord(data, 0x56)
+	num_objects = readWord(data, 0x56)
 
-	print "Number of status elements", num_status_elements
+	print "Number of objects", objects
 
 	# Load the player
-
+	player, next_addr = extractObject(data[0x58:])
 
 	return board
 
 
 def extractObject(data):
 	"""
-	Extract the object from the data
+	Extract the object from the data, starting at the provided address
 	"""
+
+	# Store all the relevant information in a dictionary
+	object_info = {}
+
+	# Get x, y and velocity info
+	object_info['x'] = readByte(data, 0x00)
+	object_info['y'] = readByte(data, 0x01)
+	object_info['step_x'] = readWord(data, 0x02)
+	object_info['step_y'] = readWord(data, 0x04)
+	object_info['cycle'] = readWord(data, 0x06)
+
+	# Object parameters
+	object_info['P1'] = readByte(data, 0x08)
+	object_info['P2'] = readByte(data, 0x09)
+	object_info['P3'] = readByte(data, 0x0A)
+
+	# For linking centipedes, etc
+	object_info['follower'] = readWord(data, 0x0B)
+	object_info['leader'] = readWord(data, 0x0D)
+
+	# What is under the object?
+	object_info['under_id'] = readByte(data, 0x0F)
+	object_info['under_color'] = readByte(data, 0x10)
+
+	# Object code
+	object_info['pointer'] = readLong(data, 0x11)
+	object_info['current_instruction'] = readWord(data, 0x15)
+
+	# Length of the information, or what object to copy this from
+	object_info['length'] = readWord(data, 0x17)
+
+	# Is there code?
+	
 
 
 

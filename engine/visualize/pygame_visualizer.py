@@ -6,7 +6,7 @@ import pygame
 from pygame.locals import *
 
 from character_set import *
-from elements import *
+#from elements import *
 
 BLACK = 0x00
 DARK_BLUE = 0x01
