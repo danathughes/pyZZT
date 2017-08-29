@@ -8,14 +8,13 @@ class Tile:
 	Object to hold tile data
 	"""
 
-	def __init__(self, element, color):
+	def __init__(self, element_id, color_id):
 		"""
 		Create a tile of the provided element and color
 		"""
 
-		self.element = element
-		self.color = color
-
+		self.element_id = element_id
+		self.color_id = color_id
 
 
 class Board:

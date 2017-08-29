@@ -38,12 +38,13 @@ def load_bitmap(filename, dimensions=(8,16)):
 	bit_array = pygame.surfarray.array2d(bitmap)
 	bit_array[bit_array > 0] = 1
 
-	# Extract the characters
-	for i in range(num_x):
-		x = i*char_width
+	# Extract the characters - These need to load from left to right, top to bottom,
+	# hence the hight index first
+	for j in range(num_y):
+		y = j*char_height
 
-		for j in range(num_y):
-			y = j*char_height
+		for i in range(num_x):
+			x = i*char_width
 
 			char = pygame.surfarray.make_surface(bit_array[x:x+char_width,y:y+char_height])
 			characters.append(char)
