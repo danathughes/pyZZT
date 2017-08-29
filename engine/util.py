@@ -90,7 +90,18 @@ def extractBoard(data):
 
 	print "Number of status elements", num_status_elements
 
+	# Load the player
+
+
 	return board
+
+
+def extractObject(data):
+	"""
+	Extract the object from the data
+	"""
+
+
 
 
 def load(filename):

@@ -48,4 +48,5 @@ class Board:
 		self.player_enter_y = 0
 		self.time_limit = 0
 
-
+		# Objects on the board
+		self.objects = []
