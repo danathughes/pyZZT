@@ -9,6 +9,7 @@
 
 from world import *
 from board import *
+from elements import *
 
 import os
 
@@ -61,7 +62,8 @@ def extractBoard(data):
 
 		# Create the appropriate number of tiles
 		for i in range(cur_tile_idx, cur_tile_idx+num_tiles):
-			board.tiles[i] = Tile(element, color)
+			#board.tiles[i] = Tile(element, color)
+			board.tiles[i] = zztElementList[element]()
 
 		cur_tile_idx += num_tiles
 		cur_rle_idx += 3

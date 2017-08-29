@@ -1738,7 +1738,7 @@ class SpinningGun():
 
 		# Color and blinking information
 		self.bg_color = bg_color
-		self.fg_color = fd_color
+		self.fg_color = fg_color
 		self.blinking = False	
 
 
@@ -1758,11 +1758,11 @@ class Pusher():
 		self.character = 0x10
 		self.color = 0xFF
 		self.destructable = False
-		self.pushable = Falsee
+		self.pushable = False
 		self.editor_floor = False
 		self.floor = False
 		self.shown = False
-		self.special_draw = Truee
+		self.special_draw = True
 		self.draw_code = 0x3517
 		self.cycle = 4
 		self.act_code = 0x358A
@@ -2686,3 +2686,19 @@ class GreyBlinkingText():
 		self.bg_color = bg_color
 		self.fg_color = fg_color
 		self.blinking = False
+
+
+
+		#################################################
+
+
+zztElementList = [ Empty, BoardEdge, Messenger, Monitor, Player, Ammo, Torch, Gem,
+						 Key, Door, Scroll, Passage, Duplicator, Bomb, Energizer, Star,
+						 ClockwiseConveyer, CounterclockwiseConveyer, Bullet, Water, Forest,
+						 Solid, Normal, Breakable, Boulder, SliderNS, SliderEW, Fake, 
+						 Invisible, BlinkWall, Transporter, Line, Ricochet, BlinkRayHorizontal,
+						 Bear, Ruffian, ZZTObject, Slime, Shark, SpinningGun, Pusher, Lion,
+						 Tiger, BlinkRayVertical, Head, Segment, DummyElement, BlueText,
+						 GreenText, CyanText, RedText, PurpleText, BrownText, BlackText,
+						 WhiteBlinkText, BlueBlinkText, GreenBlinkText, CyanBlinkText, 
+						 RedBlinkText, BrownBlinkText, GreyBlinkingText ]
